@@ -5,6 +5,10 @@
   //
   // TODO: build the swim command fetcher here
   //
+  $.get(serverUrl, (data) => {
+    console.log(data);
+  })
+
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!

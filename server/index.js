@@ -8,6 +8,8 @@ const httpHandler = require('./js/httpHandler');
 
 
 const http = require('http');
+// console.log("hiiiiii");
+// console.log(httpHandler.router);
 const server = http.createServer(httpHandler.router);
 
 const port = 3000;
