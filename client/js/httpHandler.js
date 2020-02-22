@@ -6,7 +6,9 @@
   // TODO: build the swim command fetcher here
   //
   $.get(serverUrl, (data) => {
-    console.log(data);
+    SwimTeam.move(data);
+    SwimTeam.valid(data);
+    SwimTeam.updateLoc(data);
   })
 
 
