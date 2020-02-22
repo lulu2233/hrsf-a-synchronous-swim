@@ -5,10 +5,10 @@
   //
   // TODO: build the swim command fetcher here
   //
-  setInterval( () => {
-  $.get(serverUrl, (data) => {
-    SwimTeam.move(data);
-  })}, 0);
+  // setInterval( () => {
+  // $.get(serverUrl, (data) => {
+  //   SwimTeam.move(data);
+  // })}, 0);
 
 
   /////////////////////////////////////////////////////////////////////
@@ -22,13 +22,14 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl,
       cache: false,
       contentType: false,
       processData: false,
       success: () => {
         // reload the page
-        window.location = window.location.href;
+        console.log(file)
+        //window.location = window.location.href;
       }
     });
   };

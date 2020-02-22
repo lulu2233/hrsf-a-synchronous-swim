@@ -5,7 +5,8 @@ const multipart = require('./multipartUtils');
 const messages = require('./messageQueue');
 
 // Path for the background image ///////////////////////
-module.exports.backgroundImageFile = path.join('.', 'background.jpg');
+module.exports.backgroundImageFile = path.join('.', 'background.jpg')
+;
 ////////////////////////////////////////////////////////
 
 let messageQueue = null;
@@ -24,6 +25,12 @@ module.exports.router = (req, res, next = ()=>{}) => {
   //console.log('test',messages.dequeue());
   if (req.method === 'GET') {
     res.end(messages.dequeue());
+  } else if (req.method === 'POST') {
+    // res.on('data', (chunk) => {
+    //   var body = [];
+    //   body.push(chunk);
+    // })
+    res.end(console.log(req.headers));
   } else {
     res.end();
   }

@@ -22,7 +22,7 @@ describe('server responses', () => {
   });
 
   it('should respond to a GET request for a swim command', (done) => {
-    var directions = ['left', 'right', 'up', 'down'];
+    var directions = ['left', 'right', 'up', 'down', ''];
     let {req, res} = server.mock('/', 'GET');
 
     httpHandler.router(req, res);
