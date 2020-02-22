@@ -5,11 +5,12 @@
   //
   // TODO: build the swim command fetcher here
   //
+  setInterval( () => {
   $.get(serverUrl, (data) => {
     SwimTeam.move(data);
     SwimTeam.valid(data);
     SwimTeam.updateLoc(data);
-  })
+  })}, 1000);
 
 
   /////////////////////////////////////////////////////////////////////
