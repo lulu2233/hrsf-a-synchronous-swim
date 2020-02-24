@@ -2,13 +2,13 @@
 
   const serverUrl = 'http://127.0.0.1:3000';
 
-  //
-  // TODO: build the swim command fetcher here
-  //
-  // setInterval( () => {
-  // $.get(serverUrl, (data) => {
-  //   SwimTeam.move(data);
-  // })}, 0);
+
+  TODO: build the swim command fetcher here
+
+  setInterval( () => {
+  $.get(serverUrl, (data) => {
+    SwimTeam.move(data);
+  })}, 0);
 
 
   /////////////////////////////////////////////////////////////////////
