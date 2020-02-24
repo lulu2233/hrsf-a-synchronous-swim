@@ -9,7 +9,7 @@ keypressHandler.initialize((message) => {
 );
 
 const httpHandler = require('./js/httpHandler');
-
+httpHandler.initialize(messages);
 
 const http = require('http');
 // console.log("hiiiiii");

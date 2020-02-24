@@ -3,13 +3,15 @@
   const serverUrl = 'http://127.0.0.1:3000';
 
 
-  TODO: build the swim command fetcher here
+  //TODO: build the swim command fetcher here
 
-  setInterval( () => {
-  $.get(serverUrl, (data) => {
-    SwimTeam.move(data);
-  })}, 0);
+  const fetch = () => {
+    $.get(serverUrl, (data) => {
+      SwimTeam.move(data);
+    })
+  };
 
+  setInterval(fetch, 500);
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
@@ -22,14 +24,14 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: serverUrl,
+      url: 'http://127.0.0.1:3000/background.jpg',
       cache: false,
       contentType: false,
       processData: false,
       success: () => {
         // reload the page
-        console.log(file)
-        //window.location = window.location.href;
+        //console.log(file)
+        window.location = window.location.href;
       }
     });
   };
